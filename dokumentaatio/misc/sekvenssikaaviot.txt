@@ -1,0 +1,11 @@
+https://www.websequencediagrams.com/
+
+käyttäjän kirjautuminen
+
+User->UI: click loginButton
+UI->+UI: setOnAction
+UI->+todoService: login("mluukkai")
+todoService->+UserDao: findUsername("mluukkai")
+UserDao-->-todoService: user
+todoService-->-UI: true
+UI->UI: stage.set(todoScene)

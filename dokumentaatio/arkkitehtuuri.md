@@ -35,7 +35,7 @@ Toiminnallisista kokonaisuuksista vastaa luokkan _TodoService_ ainoa olio. Luokk
 
 _TodoService_ pääsee käsiksi käyttäjiin ja todoihin tietojen tallennuksesta vastaavan luokkien kautta:
 
-![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-2.png)
+![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-3.png)
 
 ## Tietojen pysyväistallennus
 
@@ -70,7 +70,11 @@ Kuvataan seuraavaksi sovelluksen toimintalogiikka muutaman pääkäyttötapaukse
 
 #### käyttäjän kirjaanutuminen
 
-tbd
+Kun kirjautumisnäkymässä oleva käyttäjä kirjoitettuaan käyttäjätunnuksen klikkaa painiketta _loginButton_ etenee sovelluksen kontrolli seuraavasti:
+
+![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-3.png)
+
+Painikkeen painamiseen reagoiva tapahtumankuuntelija kutsuu sovelluslogiikan _appService_ metodia _login_ antaen parametriksi kirjautuneen käyttäjän. Sovelluslogiikka selvittää _userDao_:n avulla onko käyttäjä validi. Jos on, on seurauksena se että käyttöliittymä vaihtaa näkymäksi _todoScenen_, eli sovelluksen varsinaisen päänäkymän.
 
 #### uuden käyttäjän luominen
 
