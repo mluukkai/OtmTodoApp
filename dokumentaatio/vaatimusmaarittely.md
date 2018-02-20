@@ -14,7 +14,7 @@ Sovellus koostuu kolmesta eri näkymästä
 
 ![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/v-1.png)
 
-Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai kirjaantuneen käyttäjän todojen näkymään.
+Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai onnistuneen kirjautumisen yhteydessä kirjaantuneen käyttäjän todojen näkymään.
 
 ## Perusversion käyttötapaukset
 
