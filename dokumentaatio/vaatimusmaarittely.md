@@ -8,11 +8,15 @@ Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistä�
 
 Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjätyyppi eli _normaali käyttäjä_. Myöhemmin sovellukseen lisätään suuremmilla oikeuksilla varustettu _pääkäyttäjä_.
 
-## Perusversion käyttötapaukset
+## Käyttöliittymäluonnos
 
-Perusversion käyttäliittymän luonnos
+Sovellus koostuu kolmesta eri näkymästä
 
 ![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/v-1.png)
+
+Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai kirjaantuneen käyttäjän todojen näkymään.
+
+## Perusversion käyttötapaukset
 
 ### Ennen kirjautumista
 
