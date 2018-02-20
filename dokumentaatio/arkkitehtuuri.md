@@ -72,7 +72,7 @@ Kuvataan seuraavaksi sovelluksen toimintalogiikka muutaman pääkäyttötapaukse
 
 Kun kirjautumisnäkymässä oleva käyttäjä kirjoitettuaan käyttäjätunnuksen klikkaa painiketta _loginButton_ etenee sovelluksen kontrolli seuraavasti:
 
-![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-3.png)
+![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-4.png)
 
 Painikkeen painamiseen reagoiva tapahtumankuuntelija kutsuu sovelluslogiikan _appService_ metodia _login_ antaen parametriksi kirjautuneen käyttäjän. Sovelluslogiikka selvittää _userDao_:n avulla onko käyttäjä validi. Jos on, on seurauksena se että käyttöliittymä vaihtaa näkymäksi _todoScenen_, eli sovelluksen varsinaisen päänäkymän.
 
