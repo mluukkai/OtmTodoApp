@@ -1,4 +1,4 @@
-package todoapp;
+package todoapp.ui;
 
 import java.util.List;
 import todoapp.domain.TodoService;
