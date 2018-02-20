@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import todoapp.domain.User;
 
-public class FileUserDao {
+public class FileUserDao implements UserDao {
     private List<User> users;
     private String file;
 
@@ -43,14 +43,17 @@ public class FileUserDao {
         }
     }
     
+    @Override
     public List<User> getAll() {
         return users;
     }
     
+    @Override
     public User findUsername(String username) {
         return users.stream().filter(u->u.getUsername().equals(username)).findFirst().orElse(null);
     }
     
+    @Override
     public void create(User user) {
         users.add(user);
         save();

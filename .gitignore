@@ -4,3 +4,6 @@ users.txt
 .classpath
 .project
 .settings/
+/nbproject/
+target
+.vscode/

@@ -8,7 +8,7 @@ import java.util.Scanner;
 import todoapp.domain.Todo;
 import todoapp.domain.User;
 
-public class FileTodoDao {
+public class FileTodoDao implements TodoDao {
     public List<Todo> todos;
     private String file;
 
@@ -47,16 +47,19 @@ public class FileTodoDao {
         return todos.size()+1;
     }
     
+    @Override
     public List<Todo> getAll() {
         return todos;
     }
     
+    @Override
     public void create(Todo todo) {
         todo.setId(generateId());
         todos.add(todo);
         save();
     }   
     
+    @Override
     public void setDone(int id) {
         for (Todo t : todos) {
             if ( t.getId()==id) {

@@ -24,7 +24,7 @@ import todoapp.dao.FileUserDao;
 public class Main extends Application {
     private TodoService todoService;
     
-    private Scene mainScene;
+    private Scene todoScene;
     private Scene newUserScene;
     private Scene loginScene;
     
@@ -86,7 +86,7 @@ public class Main extends Application {
             if ( todoService.login(username) ){
                 loginMessage.setText("");
                 redrawTodolist();
-                primaryStage.setScene(mainScene);  
+                primaryStage.setScene(todoScene);  
                 usernameInput.setText("");
             } else {
                 loginMessage.setText("use does not exist");
@@ -153,7 +153,7 @@ public class Main extends Application {
         
         ScrollPane todoScollbar = new ScrollPane();       
         BorderPane mainPane = new BorderPane(todoScollbar);
-        mainScene = new Scene(mainPane, 300, 250);
+        todoScene = new Scene(mainPane, 300, 250);
                 
         HBox menuPane = new HBox(10);    
         Region menuSpacer = new Region();

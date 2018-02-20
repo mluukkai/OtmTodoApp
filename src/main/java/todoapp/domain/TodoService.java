@@ -2,18 +2,17 @@ package todoapp.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
-import todoapp.dao.FileTodoDao;
-import todoapp.dao.FileUserDao;
+import todoapp.dao.TodoDao;
+import todoapp.dao.UserDao;
 
 public class TodoService {
-    public List<Todo> todos;
-    private FileTodoDao todoDao;
-    private FileUserDao userDao;
+    private List<Todo> todos;
+    private TodoDao todoDao;
+    private UserDao userDao;
     private User loggedIn;
 
-    public TodoService(FileTodoDao todoDao, FileUserDao userDao) {
+    public TodoService(TodoDao todoDao, UserDao userDao) {
         this.userDao = userDao;
         this.todoDao = todoDao;
     }
