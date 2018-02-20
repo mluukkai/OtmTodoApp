@@ -40,7 +40,7 @@ Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käy
 
 ## Jatkokehitysideoita
 
-Perusversion jälkeen järjestelmää täydennetään seuraavilla toiminnallisuuksilla
+Perusversion jälkeen järjestelmää täydennetään ajan salliessa seuraavilla toiminnallisuuksilla
 
 - tehdyksi merkittyjen todojen tarkastelu
 - tehdyksi merkittyjen todojen merkkaaminen tekemättömiksi
