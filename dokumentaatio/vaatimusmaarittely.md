@@ -8,7 +8,7 @@ Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistä�
 
 Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjätyyppi eli _normaali käyttäjä_. Myöhemmin sovellukseen lisätään suuremmilla oikeuksilla varustettu _pääkäyttäjä_.
 
-## Perussversion käyttötapaukset
+## Perusversion käyttötapaukset
 
 Perusversion käyttäliittymän luonnos
 
