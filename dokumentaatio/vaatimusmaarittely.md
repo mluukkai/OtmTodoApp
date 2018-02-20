@@ -32,7 +32,7 @@ Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käy
 - käyttäjä näkee omat tekemättömät työt eli _todot_
 
 - käyttäjä voi luoda uuden todon
-  - luoto todo näkyy ainoastaan sen luoneelle käyttäjälle
+  - luou todo näkyy ainoastaan sen luoneelle käyttäjälle
 
 - käyttäjä voi merkitä todon tehdyksi, jolloin todo häviää listalta
 
