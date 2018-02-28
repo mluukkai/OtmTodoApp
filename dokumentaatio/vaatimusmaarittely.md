@@ -6,13 +6,17 @@ Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistä�
 
 ## Käyttäjät
 
-Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjätyyppi eli _normaali käyttäjä_. Myöhemmin sovellukseen lisätään suuremmilla oikeuksilla varustettu _pääkäyttäjä_.
+Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjätyyppi eli _normaali käyttäjä_. Myöhemmin sovellukseen saatetaan lisätä suuremmilla oikeuksilla varustettu _pääkäyttäjä_.
 
-## Perussversion käyttötapaukset
+## Käyttöliittymäluonnos
 
-Perusversion käyttäliittymän luonnos
+Sovellus koostuu kolmesta eri näkymästä
 
 ![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/v-1.png)
+
+Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai onnistuneen kirjautumisen yhteydessä kirjaantuneen käyttäjän todojen näkymään.
+
+## Perusversion käyttötapaukset
 
 ### Ennen kirjautumista
 
@@ -28,7 +32,7 @@ Perusversion käyttäliittymän luonnos
 - käyttäjä näkee omat tekemättömät työt eli _todot_
 
 - käyttäjä voi luoda uuden todon
-  - luoto todo näkyy ainoastaan sen luoneelle käyttäjälle
+  - luou todo näkyy ainoastaan sen luoneelle käyttäjälle
 
 - käyttäjä voi merkitä todon tehdyksi, jolloin todo häviää listalta
 
@@ -36,7 +40,7 @@ Perusversion käyttäliittymän luonnos
 
 ## Jatkokehitysideoita
 
-Perusversion jälkeen järjestelmää täydennetään seuraavilla toiminnallisuuksilla
+Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla
 
 - tehdyksi merkittyjen todojen tarkastelu
 - tehdyksi merkittyjen todojen merkkaaminen tekemättömiksi
@@ -48,6 +52,3 @@ Perusversion jälkeen järjestelmää täydennetään seuraavilla toiminnallisuu
 - lisätään todoon kenttä, johon on mahdollista merkitä tarkempia todoon liittyviä tietoja
 - käyttäjien yhteyteen salasana, joka vaaditaan kirjautuessa
 - käyttäjätunnuksen (ja siihen liittyvien todojen) poisto
-
-
-
