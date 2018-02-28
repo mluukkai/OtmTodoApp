@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TodoService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">OtmTodoApp</a> &gt; <a href="index.source.html" class="el_package">todoapp.domain</a> &gt; <span class="el_source">TodoService.java</span></div><h1>TodoService.java</h1><pre class="source lang-java linenums">package todoapp.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import todoapp.dao.TodoDao;
+import todoapp.dao.UserDao;
+
+/**
+ * Sovelluslogiikasta vastaava luokka 
+ */
+
+public class TodoService {
+    private TodoDao todoDao;
+    private UserDao userDao;
+    private User loggedIn;
+    
+<span class="fc" id="L18">    public TodoService(TodoDao todoDao, UserDao userDao) {</span>
+<span class="fc" id="L19">        this.userDao = userDao;</span>
+<span class="fc" id="L20">        this.todoDao = todoDao;</span>
+<span class="fc" id="L21">    }</span>
+    
+    /**
+    * Uuden todon lisääminen kirjautuneena olevalle käyttäjälle
+    *
+    * @param   content   luotavan todon sisältö
+    */
+    
+    public void createTodo(String content) {
+<span class="nc" id="L30">        Todo todo = new Todo(content, loggedIn);</span>
+<span class="nc" id="L31">        todoDao.create(todo);   </span>
+<span class="nc" id="L32">    }</span>
+    
+    /**
+    * kirjautuneen käyttäjän tekemättömät todot
+    * 
+    * @return kirjautuneen käyttäjän tekemättömät todot
+    */
+    
+    public List&lt;Todo&gt; getUndone() {
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        if (loggedIn==null) {</span>
+<span class="nc" id="L42">            return new ArrayList&lt;&gt;();</span>
+        }
+        
+       
+<span class="nc" id="L46">        return todoDao.getAll()</span>
+<span class="nc" id="L47">                .stream()</span>
+<span class="nc" id="L48">                .filter(t-&gt;{</span>
+<span class="nc" id="L49">                    System.out.println(t.getUser());</span>
+<span class="nc" id="L50">                    return t.getUser().equals(loggedIn);</span>
+                })
+<span class="nc bnc" id="L52" title="All 2 branches missed.">                .filter(t-&gt;!t.isDone())</span>
+<span class="nc" id="L53">                .collect(Collectors.toList());</span>
+    }
+   
+    /**
+    * todon merkitseminen tehdyksi
+    * 
+    * @param   id   tehdyksi merkittävän todon tunniste
+    */    
+    
+    public void markDone(int id) {
+<span class="nc" id="L63">        todoDao.setDone(id);</span>
+<span class="nc" id="L64">    }</span>
+    
+    /**
+    * sisäänkirjautuminen
+    * 
+    * @param   username   käyttäjätunnus
+    * 
+    * @return true jos käyttäjätunnus on olemassa, muuten false 
+    */    
+    
+    public boolean login(String username) {
+<span class="fc" id="L75">        User user = userDao.findUsername(username);</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if ( user==null) {</span>
+<span class="fc" id="L77">            return false;</span>
+        }
+        
+<span class="fc" id="L80">        loggedIn = user;</span>
+        
+<span class="fc" id="L82">        return true;</span>
+    }
+    
+    /**
+    * kirjautuneena oleva käyttäjä
+    * 
+    * @return kirjautuneena oleva käyttäjä 
+    */   
+    
+    public User getLoggedUser() {
+<span class="fc" id="L92">        return loggedIn;</span>
+    }
+   
+    /**
+    * uloskirjautuminen
+    */  
+    
+    public void logout(){
+<span class="fc" id="L100">      loggedIn = null;  </span>
+<span class="fc" id="L101">    }</span>
+    
+    /**
+    * uuden käyttäjän luominen
+    * 
+    * @param   username   käyttäjätunnus
+    * @param   name   käyttäjän nimi
+    * 
+    * @return true jos käyttäjätunnus on luotu onnistuneesti, muuten false 
+    */ 
+    
+    public boolean createUser(String username, String name) {   
+<span class="fc" id="L113">        User user = new User(username, name);</span>
+<span class="fc bfc" id="L114" title="All 2 branches covered.">        if (userDao.findUsername(username)!=null){</span>
+<span class="fc" id="L115">            return false;</span>
+        }
+<span class="fc" id="L117">        userDao.create(user);</span>
+<span class="fc" id="L118">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

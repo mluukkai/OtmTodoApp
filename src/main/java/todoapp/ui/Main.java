@@ -103,7 +103,7 @@ public class Main extends Application {
         
         loginScene = new Scene(loginPane, 300, 250);    
    
-        // new user scene
+        // new getLoggedUserscene
         
         VBox newUserPane = new VBox(10);
         
@@ -181,7 +181,7 @@ public class Main extends Application {
         mainPane.setTop(menuPane);
         
         createTodo.setOnAction(e->{
-            todoService.createTodo(newTodoInput.getText(), todoService.getLoggedUser());
+            todoService.createTodo(newTodoInput.getText());
             newTodoInput.setText("");       
             redrawTodolist();
         });

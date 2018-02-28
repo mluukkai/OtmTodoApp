@@ -1,21 +1,25 @@
 package todoapp.domain;
 
+/**
+ * Yksittäistä työtä kuvaava luokka 
+ */
+
 public class Todo {
 
     private int id;
-    private String conent;
+    private String content;
     private boolean done;
     private User user;
 
-    public Todo(int id, String conent, boolean done, User user) {
+    public Todo(int id, String content, boolean done, User user) {
         this.id = id;
-        this.conent = conent;
+        this.content = content;
         this.done = done;
         this.user = user;
     }
     
-    public Todo(String conent, User user) {
-        this.conent = conent;
+    public Todo(String content, User user) {
+        this.content = content;
         this.user = user;
         this.done = true;
     }
@@ -25,7 +29,7 @@ public class Todo {
     }
 
     public String getContent() {
-        return conent;
+        return content;
     }
 
     public User getUser() {

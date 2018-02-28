@@ -5,7 +5,7 @@ import java.util.List;
 import todoapp.dao.UserDao;
 
 public class FakeUserDao implements UserDao {
-    List<User> users = new ArrayList<User>();
+    List<User> users = new ArrayList<>();
 
     public FakeUserDao() {
         users.add(new User("testertester", "Teppo Testaaja"));
@@ -20,6 +20,7 @@ public class FakeUserDao implements UserDao {
     public void create(User user) {
         users.add(user);
     } 
+    
     @Override
     public List<User> getAll() {
         return users;
