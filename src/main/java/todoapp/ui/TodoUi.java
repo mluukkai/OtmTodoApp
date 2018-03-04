@@ -1,6 +1,8 @@
 package todoapp.ui;
 
+import java.io.FileInputStream;
 import java.util.List;
+import java.util.Properties;
 import todoapp.domain.TodoService;
 import todoapp.domain.Todo;
 import javafx.application.Application;
@@ -21,7 +23,7 @@ import javafx.stage.Stage;
 import todoapp.dao.FileTodoDao;
 import todoapp.dao.FileUserDao;
 
-public class Main extends Application {
+public class TodoUi extends Application {
     private TodoService todoService;
     
     private Scene todoScene;
@@ -32,9 +34,16 @@ public class Main extends Application {
     private Label menuLabel = new Label();
     
     @Override
-    public void init(){
-        FileUserDao userDao = new FileUserDao("users.txt");
-        FileTodoDao todoDao = new FileTodoDao("todos.txt", userDao);
+    public void init() throws Exception {
+        Properties properties = new Properties();
+
+        properties.load(new FileInputStream("config.properties"));
+        
+        String userFile = properties.getProperty("userFile");
+        String todoFile = properties.getProperty("todoFile");
+            
+        FileUserDao userDao = new FileUserDao(userFile);
+        FileTodoDao todoDao = new FileTodoDao(todoFile, userDao);
         todoService = new TodoService(todoDao, userDao);
     }
     
@@ -161,6 +170,7 @@ public class Main extends Application {
         Button logoutButton = new Button("logout");      
         menuPane.getChildren().addAll(menuLabel, menuSpacer, logoutButton);
         logoutButton.setOnAction(e->{
+            todoService.logout();
             primaryStage.setScene(loginScene);
         });        
         
@@ -193,9 +203,20 @@ public class Main extends Application {
         primaryStage.show();
         primaryStage.setOnCloseRequest(e->{
             System.out.println("klose");
+            System.out.println(todoService.getLoggedUser());
+            if (todoService.getLoggedUser()!=null) {
+                e.consume();   
+            }
+            
         });
     }
 
+    @Override
+    public void stop() {
+      // tee lopetustoimenpiteet täällä
+      System.out.println("sovellus sulkeutuu");
+    }    
+    
     public static void main(String[] args) {
         launch(args);
     }

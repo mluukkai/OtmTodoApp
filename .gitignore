@@ -7,3 +7,5 @@ users.txt
 /nbproject/
 target
 .vscode/
+nbactions.xml
+todoapp.jar

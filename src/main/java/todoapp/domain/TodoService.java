@@ -41,8 +41,7 @@ public class TodoService {
         if (loggedIn==null) {
             return new ArrayList<>();
         }
-        
-       
+          
         return todoDao.getAll()
                 .stream()
                 .filter(t->{
@@ -72,7 +71,7 @@ public class TodoService {
     */    
     
     public boolean login(String username) {
-        User user = userDao.findUsername(username);
+        User user = userDao.findByUsername(username);
         if ( user==null) {
             return false;
         }
@@ -111,7 +110,7 @@ public class TodoService {
     
     public boolean createUser(String username, String name) {   
         User user = new User(username, name);
-        if (userDao.findUsername(username)!=null){
+        if (userDao.findByUsername(username)!=null){
             return false;
         }
         userDao.create(user);

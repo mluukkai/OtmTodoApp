@@ -12,7 +12,7 @@ public class FakeUserDao implements UserDao {
     }
     
     @Override
-    public User findUsername(String username) {
+    public User findByUsername(String username) {
         return users.stream().filter(u->u.getUsername().equals(username)).findFirst().orElse(null);
     }
     

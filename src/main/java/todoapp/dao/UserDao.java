@@ -7,7 +7,7 @@ public interface UserDao {
 
     void create(User user);
 
-    User findUsername(String username);
+    User findByUsername(String username);
 
     List<User> getAll();
 
