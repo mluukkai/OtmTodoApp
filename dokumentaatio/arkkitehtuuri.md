@@ -2,7 +2,7 @@
 
 ## Rakenne
 
-Ohjelman rakenne noudattelee kolmitasoista kerrosarkkitehtuuria:
+Ohjelman rakenne noudattelee kolmitasoista kerrosarkkitehtuuria, ja koodin pakkausrakenne on seuraava:
 
 <img src="https://raw.githubusercontent.com/mluukkai/otm-2018/master/web/images/l-11.png" width="160">
 
@@ -15,19 +15,21 @@ Käyttöliittymä sisältää kolme erillistä näkymää
 - uuden käyttäjän luominen
 - todolista
 
-jokainen näistä on toteutettu omana _scene_-oliona. Näkymistä yksi kerrallaan on näkyvänä eli sijoitettuna sovelluksen _stageen_.
+jokainen näistä on toteutettu omana [Scene](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html)-oliona. Näkymistä yksi kerrallaan on näkyvänä eli sijoitettuna sovelluksen [stageen](https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html). Käyttöliittymä on rakennettu ohjelmallisesti luokassa [todoapp.ui.TodoUi](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/ui/TodoUi.java).
 
 Käyttöliittymä on pyritty eristämään täysin sovelluslogiikasta, se ainoastaan kutsuu sopivin parametrein sovelluslogiikan toteuttavan olion _todoServicen_ metodeja.
 
-Kun sovelluksen todolistan tilanne muuttuu, eli uusi käyttäjä kirjautuu, todoja merkitään tehdyksi tai niitä luodaan, renderöi sovellus todolistanäkymän uudelleen sovelluslogiikalta saamansa näytettävien todojen listan perusteella.
+Kun sovelluksen todolistan tilanne muuttuu, eli uusi käyttäjä kirjautuu, todoja merkitään tehdyksi tai niitä luodaan, kutsutaan sovelluksen metodia [redrawTodolist](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/ui/TodoUi.java#L68) joka renderöi todolistanäkymän uudelleen sovelluslogiikalta saamansa näytettävien todojen listan perusteella.
 
 ## Sovelluslogiikka
 
-Sovelluksen loogisen datamallin muodostavat luokat _User_ ja _Todo_, jotka kuvaavat käyttäjiä ja käyttäjien tehtäviä:
+Sovelluksen loogisen datamallin muodostavat luokat [User](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/User.java) ja [Todo](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/Todo.java), jotka kuvaavat käyttäjiä ja käyttäjien tehtäviä:
+
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-2.png" width="300">
 
 ![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-2.png)
 
-Toiminnallisista kokonaisuuksista vastaa luokkan _TodoService_ ainoa olio. Luokka toimii rajapintana käyttöliittymälle ja tarjoaa kaikille käyttäliittymän toiminnoille oman metodin. Näitä ovat esim.
+Toiminnallisista kokonaisuuksista vastaa luokkan [TodoService](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/TodoService.java) ainoa olio. Luokka toimii rajapintana käyttöliittymälle ja tarjoaa kaikille käyttäliittymän toiminnoille oman metodin. Näitä ovat esim.
 - boolean login(String username)
 - List<Todo> getUndone() 
 - void createTodo(String content, User user)
