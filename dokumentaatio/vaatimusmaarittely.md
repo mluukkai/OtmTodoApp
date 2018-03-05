@@ -2,7 +2,7 @@
 
 ## Soveluksen tarkoitus
 
-Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistään töistä eli _todoista_. 
+Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistään tehtävistä eli _todoista_. Sovellusta on mahdollista käyttää useamman rekisteröityneen käyttäjän, joilla kaikilla on oma yksilöllinen tehtävälistansa.
 
 ## Käyttäjät
 
@@ -14,7 +14,7 @@ Sovellus koostuu kolmesta eri näkymästä
 
 ![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/v-1.png)
 
-Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai onnistuneen kirjautumisen yhteydessä kirjaantuneen käyttäjän todojen näkymään.
+Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai onnistuneen kirjautumisen yhteydessä kirjaantuneen käyttäjän tehtävälistaan.
 
 ## Perusversion tarjoama toiminnallisuus
 

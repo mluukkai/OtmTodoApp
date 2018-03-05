@@ -2,25 +2,45 @@
 
 Lataa tiedosto [todoapp.jar](https://github.com/mluukkai/OtmTodoApp/releases/tag/0.1)
 
-## Ohjelman suorittaminen
+## Konfigurointi
 
-Ohjelma suoritetaan komennolla 
-
-```
-java -jar todoapp.jar
-```
-
-## Konfiguraatiotiedosto
-
-Ohjelma olettaa, että samassa hakemistossa on konfiguraatiotiedosto _config.properties_, joka määrittelee käyttäjät ja todot tallettavien tiedostojen nimet. Tiedoston muoto on seuraava
+Ohjelma olettaa, että sen käynnistyshakemistossa on konfiguraatiotiedosto _config.properties_, joka määrittelee käyttäjät ja todot tallettavien tiedostojen nimet. Tiedoston muoto on seuraava
 
 ```
 userFile=users.txt
 todoFile=todos.txt
 ```
 
-## Käyttäjätunnuksen luominen
+## Ohjelman käynnistäminen
+
+Ohjelma käynnistetään komennolla 
+
+```
+java -jar todoapp.jar
+```
 
 ## Kirjautuminen
 
-## Todojen luominen ja tilan vaihtaminen
+Sovellus käynnistyy kirjautumisnäkymään:
+
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-1.png" width="500">
+
+Kirjautuminen onnistuu kirjoittamalla olemassaoleva käyttäjätunnus syötekenttään ja painamalla _login_.
+
+## Uuden käyttäjän luominen
+
+Kirjautumisnäkymästä on mahdollista siirtyä uuden käyttäjän luomisnäkymään panikkeella _create new user_.
+
+Uusi käyttäjä luodaan syöttämällä tiedot syötekenttiin
+
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-2.png" width="500">
+
+Jos käyttäjän luominen onnistuu, palataan kirjautumisnäkymään.
+
+## Todojen luominen ja tehdyksi merkkaaminen
+
+Onnistuneen kirjautumisen myötä siirrytään käyttäjien tekemättömät työt listaavaan näkymään
+
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-3.png" width="500">
+
+Näkymä mahdollistaa olemassaolevien todojen merkkaamisen tehdyksi sekä uusien todojen luomisen. Klikkaamalla näkymän oikean ylänurkan painiketta, käyttäjä kirjautuu ulos sovelluksesta ja sovellus palaa takaisin kirjaantumisnäkymään.

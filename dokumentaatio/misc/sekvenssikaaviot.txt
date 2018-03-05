@@ -2,10 +2,23 @@ https://www.websequencediagrams.com/
 
 käyttäjän kirjautuminen
 
-User->UI: click loginButton
-UI->+UI: setOnAction
+User->+UI: click loginButton
 UI->+todoService: login("mluukkai")
 todoService->+UserDao: findUsername("mluukkai")
 UserDao-->-todoService: user
 todoService-->-UI: true
 UI->UI: stage.set(todoScene)
+UI-->-User: 
+
+uuden käyttäjän luominen
+
+User->+UI: click createNewUserButton
+UI->+todoService: createUser('hellas', 'Arto H')
+todoService->+UserDao: findUsername("hellas")
+UserDao-->-todoService: null
+todoService->*arto: new User('hellas', 'Arto H')
+todoService->UserDao: create(arto)
+todoService-->-UI: true
+UI->UI: stage.set(loginScene)
+UI-->-User: 
+

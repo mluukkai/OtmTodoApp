@@ -109,10 +109,10 @@ public class TodoService {
     */ 
     
     public boolean createUser(String username, String name) {   
-        User user = new User(username, name);
         if (userDao.findByUsername(username) != null) {
             return false;
         }
+        User user = new User(username, name);
         userDao.create(user);
         return true;
     }

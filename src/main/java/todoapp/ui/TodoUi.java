@@ -112,7 +112,7 @@ public class TodoUi extends Application {
         
         loginScene = new Scene(loginPane, 300, 250);    
    
-        // new getLoggedUserscene
+        // new createNewUserScene
         
         VBox newUserPane = new VBox(10);
         
