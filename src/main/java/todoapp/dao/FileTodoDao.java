@@ -15,7 +15,7 @@ public class FileTodoDao implements TodoDao {
     public FileTodoDao(String file, FileUserDao users) throws Exception {
         todos = new ArrayList<>();
         this.file = file;
-        try{
+        try {
             Scanner reader = new Scanner(new File(file));
             while (reader.hasNextLine()) {
                 String[] parts = reader.nextLine().split(";");
@@ -25,7 +25,7 @@ public class FileTodoDao implements TodoDao {
                 Todo todo = new Todo(id, parts[1], done, user);
                 todos.add(todo);
             }
-        } catch(Exception e){
+        } catch (Exception e) {
             FileWriter writer = new FileWriter(new File(file));
             writer.close();
         }
@@ -36,16 +36,16 @@ public class FileTodoDao implements TodoDao {
         try {
             FileWriter writer = new FileWriter(new File(file));
             for (Todo todo : todos) {
-                writer.write(todo.getId()+";"+todo.getContent()+";"+todo.isDone()+";"+todo.getUser().getUsername()+"\n");
+                writer.write(todo.getId() + ";" + todo.getContent() + ";" + todo.isDone() + ";" + todo.getUser().getUsername() + "\n");
             }
             writer.close();
-        } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }    
     
     private int generateId() {
-        return todos.size()+1;
+        return todos.size() + 1;
     }
     
     @Override
@@ -63,7 +63,7 @@ public class FileTodoDao implements TodoDao {
     @Override
     public void setDone(int id) {
         for (Todo t : todos) {
-            if ( t.getId()==id) {
+            if (t.getId() == id) {
                 t.setDone();
             }
         }

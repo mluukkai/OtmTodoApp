@@ -21,7 +21,7 @@ public class FileUserDao implements UserDao {
                 User u = new User(parts[0], parts[1]);
                 users.add(u);
             }
-        } catch(Exception e){
+        } catch (Exception e) {
             FileWriter writer = new FileWriter(new File(file));
             writer.close();
         }
@@ -32,10 +32,10 @@ public class FileUserDao implements UserDao {
         try {
             FileWriter writer = new FileWriter(new File(file));
             for (User user : users) {
-                writer.write(user.getUsername()+";"+user.getName()+"\n");
+                writer.write(user.getUsername() + ";" + user.getName() + "\n");
             }
             writer.close();
-        } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -47,7 +47,11 @@ public class FileUserDao implements UserDao {
     
     @Override
     public User findByUsername(String username) {
-        return users.stream().filter(u->u.getUsername().equals(username)).findFirst().orElse(null);
+        return users.stream()
+            .filter(u->u.getUsername()
+            .equals(username))
+            .findFirst()
+            .orElse(null);
     }
     
     @Override

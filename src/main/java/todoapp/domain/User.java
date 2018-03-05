@@ -23,7 +23,7 @@ public class User {
 
     @Override
     public boolean equals(Object obj) {
-        User other = (User)obj;
+        User other = (User) obj;
         return username.equals(other.username);
     }
           

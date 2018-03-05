@@ -50,7 +50,7 @@ public class Todo {
 
     @Override
     public boolean equals(Object obj) {
-        Todo other = (Todo)obj;
+        Todo other = (Todo) obj;
         return id == other.id;
     }
 

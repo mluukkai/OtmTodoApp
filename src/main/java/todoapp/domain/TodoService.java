@@ -38,18 +38,18 @@ public class TodoService {
     */
     
     public List<Todo> getUndone() {
-        if (loggedIn==null) {
+        if (loggedIn == null) {
             return new ArrayList<>();
         }
           
         return todoDao.getAll()
-                .stream()
-                .filter(t->{
-                    System.out.println(t.getUser());
-                    return t.getUser().equals(loggedIn);
-                })
-                .filter(t->!t.isDone())
-                .collect(Collectors.toList());
+            .stream()
+            .filter(t-> {
+                System.out.println(t.getUser());
+                return t.getUser().equals(loggedIn);
+            })
+            .filter(t->!t.isDone())
+            .collect(Collectors.toList());
     }
    
     /**
@@ -72,7 +72,7 @@ public class TodoService {
     
     public boolean login(String username) {
         User user = userDao.findByUsername(username);
-        if ( user==null) {
+        if (user == null) {
             return false;
         }
         
@@ -95,8 +95,8 @@ public class TodoService {
     * uloskirjautuminen
     */  
     
-    public void logout(){
-      loggedIn = null;  
+    public void logout() {
+        loggedIn = null;  
     }
     
     /**
@@ -110,7 +110,7 @@ public class TodoService {
     
     public boolean createUser(String username, String name) {   
         User user = new User(username, name);
-        if (userDao.findByUsername(username)!=null){
+        if (userDao.findByUsername(username) != null) {
             return false;
         }
         userDao.create(user);
