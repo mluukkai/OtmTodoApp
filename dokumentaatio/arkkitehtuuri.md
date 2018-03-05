@@ -25,9 +25,7 @@ Kun sovelluksen todolistan tilanne muuttuu, eli uusi käyttäjä kirjautuu, todo
 
 Sovelluksen loogisen datamallin muodostavat luokat [User](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/User.java) ja [Todo](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/Todo.java), jotka kuvaavat käyttäjiä ja käyttäjien tehtäviä:
 
-<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-2.png" width="300">
-
-![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-2.png)
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-2.png" width="400">
 
 Toiminnallisista kokonaisuuksista vastaa luokkan [TodoService](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/TodoService.java) ainoa olio. Luokka toimii rajapintana käyttöliittymälle ja tarjoaa kaikille käyttäliittymän toiminnoille oman metodin. Näitä ovat esim.
 - boolean login(String username)
@@ -37,7 +35,7 @@ Toiminnallisista kokonaisuuksista vastaa luokkan [TodoService](https://github.co
 
 _TodoService_ pääsee käsiksi käyttäjiin ja todoihin tietojen tallennuksesta vastaavan luokkien kautta:
 
-![](https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-3.png)
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-3b.png" width="600">
 
 ## Tietojen pysyväistallennus
 
