@@ -2,7 +2,7 @@
 
 Referenssisovellus kurssille Ohjelmistotekniikan menetelmät. Sovelluksen tarkoituksena on demonstroida erästä tapaa tehdä suurin piirtein täysiin pisteisiin riittävä dokumentaatio projektillesi. Itse ohjelma on sen verran suppea, että saadaksesi kurssilta arvosanan 5 joudut tekemään hieman laajemman sovelluksen. Myös testaus on jätetty vajaaksi.
 
-Dokumentaatio on tässä vaiheessa (ti 6.3.) vielä hieman keskeneräinen mutta valmistuu lähiaikoina.
+**Dokumentaatio on tässä vaiheessa (ti 6.3.) vielä hieman keskeneräinen mutta valmistuu lähiaikoina.**
 
 ## Komentorivitoiminnot
 

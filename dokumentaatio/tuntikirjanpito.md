@@ -9,4 +9,7 @@
 |       | 2    | määrittelydokumentti |
 | 21.2. | 4    | arkkitehtuurikuvaus |
 |       | 5    | testaus |
-| yht   | 22   | | 
+| 4.3.  | 1    | koodin refaktorointia |
+| 5.3.  | 2    | arkkitehtuurikuvauksen tarkennus |
+|       | 1    | käyttöohje |
+| yht   | 26   | | 
