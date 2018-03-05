@@ -23,7 +23,7 @@ java -jar todoapp.jar
 
 Sovellus käynnistyy kirjautumisnäkymään:
 
-<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-1.png" width="500">
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-1.png" width="400">
 
 Kirjautuminen onnistuu kirjoittamalla olemassaoleva käyttäjätunnus syötekenttään ja painamalla _login_.
 
@@ -33,7 +33,7 @@ Kirjautumisnäkymästä on mahdollista siirtyä uuden käyttäjän luomisnäkym�
 
 Uusi käyttäjä luodaan syöttämällä tiedot syötekenttiin
 
-<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-2.png" width="500">
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-2.png" width="400">
 
 Jos käyttäjän luominen onnistuu, palataan kirjautumisnäkymään.
 
@@ -41,6 +41,6 @@ Jos käyttäjän luominen onnistuu, palataan kirjautumisnäkymään.
 
 Onnistuneen kirjautumisen myötä siirrytään käyttäjien tekemättömät työt listaavaan näkymään
 
-<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-3.png" width="500">
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-3.png" width="400">
 
 Näkymä mahdollistaa olemassaolevien todojen merkkaamisen tehdyksi sekä uusien todojen luomisen. Klikkaamalla näkymän oikean ylänurkan painiketta, käyttäjä kirjautuu ulos sovelluksesta ja sovellus palaa takaisin kirjaantumisnäkymään.
