@@ -11,14 +11,9 @@ public class FileUserDao implements UserDao {
     private List<User> users;
     private String file;
 
-    public FileUserDao(String file) {
+    public FileUserDao(String file) throws Exception {
         users = new ArrayList<>();
         this.file = file;
-        load();
-        
-    }
-
-    private void load() {
         try {
             Scanner reader = new Scanner(new File(file));
             while (reader.hasNextLine()) {
@@ -27,8 +22,10 @@ public class FileUserDao implements UserDao {
                 users.add(u);
             }
         } catch(Exception e){
-            e.printStackTrace();
+            FileWriter writer = new FileWriter(new File(file));
+            writer.close();
         }
+        
     }
     
     private void save() {

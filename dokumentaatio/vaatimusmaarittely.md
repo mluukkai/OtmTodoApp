@@ -2,7 +2,7 @@
 
 ## Soveluksen tarkoitus
 
-Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistään töistä eli _todoista_.
+Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistään töistä eli _todoista_. 
 
 ## Käyttäjät
 
@@ -16,7 +16,7 @@ Sovellus koostuu kolmesta eri näkymästä
 
 Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista siirtyä uuden käyttäjän luomisnäkymään tai onnistuneen kirjautumisen yhteydessä kirjaantuneen käyttäjän todojen näkymään.
 
-## Perusversion käyttötapaukset
+## Perusversion tarjoama toiminnallisuus
 
 ### Ennen kirjautumista
 

@@ -12,7 +12,7 @@ public class FileTodoDao implements TodoDao {
     public List<Todo> todos;
     private String file;
 
-    public FileTodoDao(String file, FileUserDao users) {
+    public FileTodoDao(String file, FileUserDao users) throws Exception {
         todos = new ArrayList<>();
         this.file = file;
         try{
@@ -26,7 +26,8 @@ public class FileTodoDao implements TodoDao {
                 todos.add(todo);
             }
         } catch(Exception e){
-            e.printStackTrace();
+            FileWriter writer = new FileWriter(new File(file));
+            writer.close();
         }
         
     }
