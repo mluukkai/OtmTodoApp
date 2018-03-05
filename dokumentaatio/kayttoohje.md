@@ -31,7 +31,7 @@ Kirjautuminen onnistuu kirjoittamalla olemassaoleva käyttäjätunnus syötekent
 
 Kirjautumisnäkymästä on mahdollista siirtyä uuden käyttäjän luomisnäkymään panikkeella _create new user_.
 
-Uusi käyttäjä luodaan syöttämällä tiedot syötekenttiin
+Uusi käyttäjä luodaan syöttämällä tiedot syötekenttiin ja painamalla _create_
 
 <img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-2.png" width="400">
 
@@ -43,4 +43,6 @@ Onnistuneen kirjautumisen myötä siirrytään käyttäjien tekemättömät työ
 
 <img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/k-3.png" width="400">
 
-Näkymä mahdollistaa olemassaolevien todojen merkkaamisen tehdyksi sekä uusien todojen luomisen. Klikkaamalla näkymän oikean ylänurkan painiketta, käyttäjä kirjautuu ulos sovelluksesta ja sovellus palaa takaisin kirjaantumisnäkymään.
+Näkymä mahdollistaa olemassaolevien todojen merkkaamisen tehdyksi painikkeella _done_ sekä uusien todojen luomisen kirjoittamalla syötekenttään tehtävän kuvauksen ja painamalla _create_. 
+
+Klikkaamalla näkymän oikean ylänurkan painiketta _logout_, käyttäjä kirjautuu ulos sovelluksesta ja sovellus palaa takaisin kirjaantumisnäkymään.
