@@ -35,7 +35,7 @@ Toiminnallisista kokonaisuuksista vastaa luokkan [TodoService](https://github.co
 
 _TodoService_ pääsee käsiksi käyttäjiin ja todoihin tietojen tallennuksesta vastaavan luokkien kautta:
 
-<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-3b.png" width="500">
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-3c.png" width="500">
 
 ## Tietojen pysyväistallennus
 
