@@ -202,7 +202,7 @@ public class TodoUi extends Application {
         primaryStage.setScene(loginScene);
         primaryStage.show();
         primaryStage.setOnCloseRequest(e->{
-            System.out.println("klose");
+            System.out.println("closing");
             System.out.println(todoService.getLoggedUser());
             if (todoService.getLoggedUser()!=null) {
                 e.consume();   

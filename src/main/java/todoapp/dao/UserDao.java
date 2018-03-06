@@ -5,7 +5,7 @@ import todoapp.domain.User;
 
 public interface UserDao {
 
-    void create(User user);
+    User create(User user);
 
     User findByUsername(String username);
 

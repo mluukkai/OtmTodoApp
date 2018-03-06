@@ -55,8 +55,9 @@ public class FileUserDao implements UserDao {
     }
     
     @Override
-    public void create(User user) {
+    public User create(User user) {
         users.add(user);
         save();
+        return user;
     }    
 }

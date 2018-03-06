@@ -17,9 +17,10 @@ public class FakeTodoDao implements TodoDao {
     }
     
     @Override
-    public void create(Todo todo) {
+    public Todo create(Todo todo) {
         todo.setId(todos.size()+1);
         todos.add(todo);
+        return todo;
     }   
     
     @Override

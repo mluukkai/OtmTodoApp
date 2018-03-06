@@ -5,7 +5,7 @@ import todoapp.domain.Todo;
 
 public interface TodoDao {
 
-    void create(Todo todo);
+    Todo create(Todo todo);
 
     List<Todo> getAll();
 

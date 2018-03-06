@@ -54,10 +54,11 @@ public class FileTodoDao implements TodoDao {
     }
     
     @Override
-    public void create(Todo todo) {
+    public Todo create(Todo todo) {
         todo.setId(generateId());
         todos.add(todo);
         save();
+        return todo;
     }   
     
     @Override

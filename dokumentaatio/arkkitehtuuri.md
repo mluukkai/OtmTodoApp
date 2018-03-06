@@ -92,6 +92,15 @@ Kun uuden käyttäjän luomisnäkymässä on syötetty käyttäjätunnus joka ei
 
 [Tapahtumakäsittelijä](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/ui/TodoUi.java#L138) kutsuu sovelluslogiikan metodia [createUser](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/TodoService.java#L111) antaen parametriksi luotavan käyttäjän tiedot. Sovelluslogiikka selvittää _userDao_:n avulla onko käyttäjätunnus olemassa. Jos ei, eli uuden käyttäjän luominen on mahdollista, luo sovelluslogiikka _User_-olion ja tallettaa sen kutsumalla _userDao_:n metodia _create_. Tästä seurauksena on se, että käyttöliittymä vaihtaa näkymäksi _loginScenen_ eli kirjautumisnäkymän.
 
-#### todon merkkaaminen tehdyksi
+#### Todon luominen
 
-tbd
+Uuden todon luovan _createTodo_-painikkeen klikkaamisen jälkeen sovelluksen kontrolli eteneeseuraavasti:
+
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-6.png" width="600">
+
+[Tapahtumakäsittelijä](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/ui/TodoUi.java#L193) kutsuu sovelluslogiikan metodia [createTodo](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/TodoService.java#L29) antaen parametriksi luotavan työn tiedot. Sovelluslogiikka luo uuden _Todo_-olion ja 
+ tallettaa sen kutsumalla _todoDao_:n metodia _create_. Tästä seurauksena on se, että käyttöliittymä päivittää näytettävät todot kutsumalla omaa metodiaan _redrawTodolist_.
+
+#### Muut toiminnallisuudet
+
+Sama periaate toistoo sovelluksen kaikissa toiminnallisuuksissa, käyttöliittymän tapahtumakäsittelijä kutsuu sopivaa sovelluslogiikan metodia, sovelluslogiikka päivittää todojen tia kirjautuneen käyttäjän tilaa. Kontrollin palatessa käyttäliittymään, päivitetään tarvittaessa todojen lista sekä aktiivinen näkyvä.
