@@ -44,13 +44,13 @@ public class TodoServiceUserTest {
     }    
     
     @Test
-    public void userCreationFailsIfNameNotUnique() {
+    public void userCreationFailsIfNameNotUnique() throws Exception {
         boolean result = service.createUser("testertester", "Teuvo Testaaja");
         assertFalse(result);
     }
     
     @Test
-    public void succesfullyCreatedUserCanLogIn() {
+    public void succesfullyCreatedUserCanLogIn() throws Exception {
         boolean result = service.createUser("dijkstra", "Edsger Dijkstra");
         assertTrue(result);
         

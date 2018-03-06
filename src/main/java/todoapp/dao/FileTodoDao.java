@@ -12,7 +12,7 @@ public class FileTodoDao implements TodoDao {
     public List<Todo> todos;
     private String file;
 
-    public FileTodoDao(String file, FileUserDao users) throws Exception {
+    public FileTodoDao(String file, UserDao users) throws Exception {
         todos = new ArrayList<>();
         this.file = file;
         try {
@@ -32,15 +32,11 @@ public class FileTodoDao implements TodoDao {
         
     }
     
-    private void save() {
-        try {
-            FileWriter writer = new FileWriter(new File(file));
+    private void save() throws Exception{
+        try (FileWriter writer = new FileWriter(new File(file))) {
             for (Todo todo : todos) {
                 writer.write(todo.getId() + ";" + todo.getContent() + ";" + todo.isDone() + ";" + todo.getUser().getUsername() + "\n");
             }
-            writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }    
     
@@ -54,7 +50,7 @@ public class FileTodoDao implements TodoDao {
     }
     
     @Override
-    public Todo create(Todo todo) {
+    public Todo create(Todo todo) throws Exception {
         todo.setId(generateId());
         todos.add(todo);
         save();
@@ -62,7 +58,7 @@ public class FileTodoDao implements TodoDao {
     }   
     
     @Override
-    public void setDone(int id) {
+    public void setDone(int id) throws Exception {
         for (Todo t : todos) {
             if (t.getId() == id) {
                 t.setDone();

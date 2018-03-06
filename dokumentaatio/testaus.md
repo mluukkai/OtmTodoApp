@@ -18,9 +18,11 @@ Molempien DAO-luokkien toiminnallisuus on testattu luomalla testeissä tilapäin
 
 ### Testauskattavuus
 
-Käyttöliittymäkerrosta lukuunottamatta sovelluksen testauskattavuus on xx %:
+Käyttöliittymäkerrosta lukuunottamatta sovelluksen testauksen rivikattavuus on 94% ja haarautumakattavuus 96%
 
-testaamatta jäi:
+<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/t-1.png" width="800">
+
+Testaamatta jäivät tilanteet, joissa käyttäjät tai tehtävät tallettavia tiedostoja ei ole, tai niihin ei ole luku- ja kirjoitusoikeutta.
 
 ## Järjestelmätestaus
 
@@ -29,3 +31,5 @@ Sovelluksen järjestelmätestaus on suoritettu manuaalisesti.
 - asennus
 
 - toiminnallisuudet
+
+## Sovellukseen jääneet ongelmat

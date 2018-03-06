@@ -21,7 +21,7 @@ public class Todo {
     public Todo(String content, User user) {
         this.content = content;
         this.user = user;
-        this.done = true;
+        this.done = false;
     }
     
     public void setId(int id) {
@@ -50,11 +50,11 @@ public class Todo {
 
     @Override
     public boolean equals(Object obj) {
+        if (!(obj instanceof Todo)) {
+            return false;
+        }
         Todo other = (Todo) obj;
         return id == other.id;
     }
 
-    public void setDoneTo(boolean done) {
-        this.done = done;
-    }
 }

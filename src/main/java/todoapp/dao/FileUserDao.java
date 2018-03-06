@@ -28,16 +28,12 @@ public class FileUserDao implements UserDao {
         
     }
     
-    private void save() {
-        try {
-            FileWriter writer = new FileWriter(new File(file));
+    private void save() throws Exception{
+        try (FileWriter writer = new FileWriter(new File(file))) {
             for (User user : users) {
                 writer.write(user.getUsername() + ";" + user.getName() + "\n");
             }
-            writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } 
     }
     
     @Override
@@ -55,7 +51,7 @@ public class FileUserDao implements UserDao {
     }
     
     @Override
-    public User create(User user) {
+    public User create(User user) throws Exception {
         users.add(user);
         save();
         return user;

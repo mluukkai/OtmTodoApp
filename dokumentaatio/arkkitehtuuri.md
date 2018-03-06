@@ -105,7 +105,16 @@ Uuden todon luovan _createTodo_-painikkeen klikkaamisen jälkeen sovelluksen kon
 
 Sama periaate toistoo sovelluksen kaikissa toiminnallisuuksissa, käyttöliittymän tapahtumakäsittelijä kutsuu sopivaa sovelluslogiikan metodia, sovelluslogiikka päivittää todojen tia kirjautuneen käyttäjän tilaa. Kontrollin palatessa käyttäliittymään, päivitetään tarvittaessa todojen lista sekä aktiivinen näkyvä.
 
-### Ohjelman rakenteeseen jääneet heikkoudet
+## Ohjelman rakenteeseen jääneet heikkoudet
 
-- gui roskaa
-- daoissa copypastea
+### käyttöliittymä
+
+Graafinen käyttöliittymä on toteutettu määrittelemällä lähes koko käyttöliittymän struktuuri luokan _TodoUi_ metodissa _start_. Ainakin kaikkien sovelluksen kolmen päänäkymän rakentava koodi olisi syytä erottaa omiksi metodeikseen tai kenties luokiksi. Muuttujien nimentää olisi myös syytä parantaa. 
+
+Käyttöliittymän rakenteen ohjelmallinen määrittely kannattaisi kenties korvata FXML-määrittelyllä, tällöin sovelluslogiikan ja käyttöliittymän tapahtumankäsittelijöiden välinen kommunikointi ei hukkuisi GUI-elementtejä rakentavan koodin sekaan.
+
+### DAO-luokat
+
+FileDao-toteutuksiin on jäänyt paljon toisteista koodia, molemmat mm. sisältävät hyvin samankaltaisen logiikan tiedoston lukemiseen ja tidostoon kirjoittamiseen. Tämä koodi olisi syytä eroittaa omaan luokkaansa.
+
+DAO-toteutusten automaattiset testit tekisivät refaktoroinnin suhteellisen riskittömäksi.

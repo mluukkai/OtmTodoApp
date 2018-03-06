@@ -2,6 +2,8 @@ package todoapp.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import todoapp.dao.TodoDao;
 import todoapp.dao.UserDao;
@@ -26,9 +28,14 @@ public class TodoService {
     * @param   content   luotavan todon sisältö
     */
     
-    public void createTodo(String content) {
+    public boolean createTodo(String content) {
         Todo todo = new Todo(content, loggedIn);
-        todoDao.create(todo);   
+        try {   
+            todoDao.create(todo);
+        } catch (Exception ex) {
+            return false;
+        }
+        return true;
     }
     
     /**
@@ -44,10 +51,7 @@ public class TodoService {
           
         return todoDao.getAll()
             .stream()
-            .filter(t-> {
-                System.out.println(t.getUser());
-                return t.getUser().equals(loggedIn);
-            })
+            .filter(t-> t.getUser().equals(loggedIn))
             .filter(t->!t.isDone())
             .collect(Collectors.toList());
     }
@@ -59,7 +63,10 @@ public class TodoService {
     */    
     
     public void markDone(int id) {
-        todoDao.setDone(id);
+        try {
+            todoDao.setDone(id);
+        } catch (Exception ex) {
+        }
     }
     
     /**
@@ -108,12 +115,17 @@ public class TodoService {
     * @return true jos käyttäjätunnus on luotu onnistuneesti, muuten false 
     */ 
     
-    public boolean createUser(String username, String name) {   
+    public boolean createUser(String username, String name)  {   
         if (userDao.findByUsername(username) != null) {
             return false;
         }
         User user = new User(username, name);
-        userDao.create(user);
+        try {
+            userDao.create(user);
+        } catch(Exception e) {
+            return false;
+        }
+
         return true;
     }
 }

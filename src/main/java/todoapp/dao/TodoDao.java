@@ -5,10 +5,10 @@ import todoapp.domain.Todo;
 
 public interface TodoDao {
 
-    Todo create(Todo todo);
+    Todo create(Todo todo) throws Exception;
 
     List<Todo> getAll();
 
-    void setDone(int id);
+    void setDone(int id) throws Exception;
 
 }
