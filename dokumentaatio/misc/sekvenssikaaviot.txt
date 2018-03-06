@@ -22,3 +22,13 @@ todoService-->-UI: true
 UI->UI: stage.set(loginScene)
 UI-->-User: 
 
+todon luominen
+
+User->+UI: click createTodo
+UI->+todoService: createTodo("vie roskat")
+todoService->*todo: new Todo("vie roskat", mluukkai)
+todoService->TodoDao: create(todo)
+todoService-->-UI: 
+UI->UI: redrawTodolist()
+UI-->-User: 
+mluukkai->mluukkai:

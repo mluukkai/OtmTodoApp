@@ -12,4 +12,5 @@
 | 4.3.  | 1    | koodin refaktorointia |
 | 5.3.  | 2    | arkkitehtuurikuvauksen tarkennus |
 |       | 1    | käyttöohje |
-| yht   | 26   | | 
+| 6.3.  | 2    | testaus |
+| yht   | 28   | | 
