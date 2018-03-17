@@ -6,7 +6,7 @@ Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistä�
 
 ## Käyttäjät
 
-Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjätyyppi eli _normaali käyttäjä_. Myöhemmin sovellukseen saatetaan lisätä suuremmilla oikeuksilla varustettu _pääkäyttäjä_.
+Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjärooli eli _normaali käyttäjä_. Myöhemmin sovellukseen saatetaan lisätä suuremmilla oikeuksilla varustettu _pääkäyttäjä_.
 
 ## Käyttöliittymäluonnos
 
