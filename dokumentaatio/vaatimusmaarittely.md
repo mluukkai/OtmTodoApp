@@ -1,6 +1,6 @@
 # Vaatimusmäärittely
 
-## Soveluksen tarkoitus
+## Sovelluksen tarkoitus
 
 Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistään töistä eli _todoista_. Sovellusta on mahdollista käyttää useamman rekisteröityneen käyttäjän, joilla kaikilla on oma yksilöllinen tehtävälistansa.
 
