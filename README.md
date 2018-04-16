@@ -14,6 +14,10 @@ Referenssisovellus kurssille Ohjelmistotekniikan menetelmät. Sovelluksen tarkoi
 
 [Työaikakirjanpito](https://github.com/mluukkai/OtmTodoApp/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+## Releaset
+
+[Viikko 5](https://github.com/mluukkai/OtmTodoApp/releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 
 ### Testaus
