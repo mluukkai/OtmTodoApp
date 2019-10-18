@@ -4,7 +4,7 @@ Sovelluksen avulla käyttäjien on mahdollista pitää kirjaa tekemättömistä�
 
 Sovellus toimii myös Helsingin yliopiston Tietojenkäsittelytieteen kurssin Ohjelmistotekniikan menetelmät referenssisovelluksena. Sovelluksen tarkoituksena on demonstroida erästä tapaa tehdä suurin piirtein täysiin pisteisiin riittävä dokumentaatio sekä testaus projektillesi. Itse ohjelma on sen verran suppea, että saadaksesi kurssilta arvosanan 5 joudut tekemään hieman laajemman sovelluksen.
 
-**HUOM!! Jotta esimerkkisovelluksen saa toimimaan laitoksen koneilla tarvitset [java8-versiom](https://github.com/mluukkai/ohjelmistotekniikka-syksy-2019/blob/master/misc/Java8.md)**
+**HUOM!! Jotta esimerkkisovelluksen saa toimimaan laitoksen koneilla tarvitset [java8-version](https://github.com/mluukkai/ohjelmistotekniikka-syksy-2019/blob/master/misc/Java8.md)**
 
 ## Dokumentaatio
 
