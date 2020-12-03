@@ -80,17 +80,18 @@ Tiedostoon [checkstyle.xml](https://github.com/mluukkai/OtmTodoApp/blob/master/c
 
 Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto _target/site/checkstyle.html_
 
-### Javan ja Mavenin asennusohjeita Macille Homebrew'n kautta
+## Javan ja Mavenin asennusohjeita Macille Homebrew'n kautta
 
 Homebrew on Linuxin pakettimanagereita vastaava pakettimanageri MacOS-käyttöjärjestelmälle. Nämä ohjeet toimivat ainakin MacOS:n versiolle 10.15. [Asennusohjeet Homebrew'lle.](https://brew.sh/index_fi)
 
+### Javan asennus
 Homebrew'n asennuksen jälkeen Javan saa asennettua Macille yksinkertaisesti esimerkiksi komennolla
 
 ```
 brew install adoptopenjdk
 ```
-
-Mavenin taas saa asennettua komennolla
+### Mavenin asennus ja paluu Javan versioon 11
+Mavenin saa asennettua komennolla
 
 ```
 brew install maven
