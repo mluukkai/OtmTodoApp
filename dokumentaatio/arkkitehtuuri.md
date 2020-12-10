@@ -27,7 +27,7 @@ Sovelluksen loogisen datamallin muodostavat luokat [User](https://github.com/mlu
 
 <img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/a-2.png" width="400">
 
-Toiminnallisista kokonaisuuksista vastaa luokkan [TodoService](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/TodoService.java) ainoa olio. Luokka tarjoaa kaikille käyttäliittymän toiminnoille oman metodin. Näitä ovat esim.
+Toiminnallisista kokonaisuuksista vastaa luokkan [TodoService](https://github.com/mluukkai/OtmTodoApp/blob/master/src/main/java/todoapp/domain/TodoService.java) ainoa olio. Luokka tarjoaa kaikille käyttöliittymän toiminnoille oman metodin. Näitä ovat esim.
 - boolean login(String username)
 - List<Todo> getUndone() 
 - void createTodo(String content, User user)
