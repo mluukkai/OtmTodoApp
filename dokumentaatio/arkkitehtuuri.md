@@ -33,7 +33,7 @@ Toiminnallisista kokonaisuuksista vastaa luokkan [TodoService](https://github.co
 - void createTodo(String content, User user)
 - void markDone(int id)
 
-_TodoService_ pääsee käsiksi käyttäjiin ja todoihin tietojen tallennuksesta vastaavan pakkauksessa _todoapp.dao_ sijaitsevien rajapinnat _TodoDao_ ja _UserDao_ toteuttavien luokkien kautta. Luokkien toteutuksen [injektoidaan](https://en.wikipedia.org/wiki/Dependency_injection) sovelluslogiikalle konstruktorikutsun yhteydessä.
+_TodoService_ pääsee käsiksi käyttäjiin ja todoihin tietojen tallennuksesta vastaavan pakkauksessa _todoapp.dao_ sijaitsevien rajapinnat _TodoDao_ ja _UserDao_ toteuttavien luokkien kautta. Luokkien toteutus [injektoidaan](https://en.wikipedia.org/wiki/Dependency_injection) sovelluslogiikalle konstruktorikutsun yhteydessä.
 
 TodoServicen ja ohjelman muiden osien suhdetta kuvaava luokka/pakkauskaavio:
 
